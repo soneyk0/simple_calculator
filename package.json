@@ -1,6 +1,7 @@
 {
   "name": "calculator",
   "version": "1.0.0",
+  "homepage": "https://soneyk0.github.io/simple_calculator",
   "description": "",
   "main": "index.js",
   "type": "module",
@@ -8,7 +9,9 @@
     "build": "SET NODE_ENV='production' && webpack",
     "start": "webpack-dev-server",
     "lint": "eslint",
-    "format": "prettier --write \"**/*.{js,jsx}\""
+    "format": "prettier --write \"**/*.{js,jsx}\"",
+    "predeploy": "npm run build",
+    "deploy": "gh-pages -d dist"
   },
   "keywords": [],
   "author": "",
@@ -20,6 +23,7 @@
     "eslint": "^9.10.0",
     "eslint-config-prettier": "^9.1.0",
     "eslint-plugin-prettier": "^5.2.1",
+    "gh-pages": "^6.1.1",
     "html-webpack-plugin": "^5.6.0",
     "prettier": "^3.3.3",
     "style-loader": "^4.0.0",
