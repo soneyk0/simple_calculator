@@ -9,7 +9,7 @@ const operations = {
   '-': subtract,
   '+': sum,
   '/': divide,
-  'X': multiply,
+  X: multiply,
   '%': percent,
   '+/-': changeSign
 };

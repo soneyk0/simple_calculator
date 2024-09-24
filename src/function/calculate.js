@@ -33,23 +33,23 @@ document.querySelector('.buttons').onclick = event => {
   }
 
   if (screen.textContent.length >= 8 && !action.includes(valueOfCurrentButton) && valueOfCurrentButton !== '=') {
-    buttons.forEach(button => {
-      if (button.classList.contains('ac')) {
-        button.disabled = false;
-      } else {
-        button.classList.add('disabled');
-        button.disabled = true; // Отключаем остальные кнопки
-        document.querySelector('.ac').onclick = () => {
-          clearAll();
-          buttons.forEach(btn => {
-            btn.classList.remove('disabled');
-            btn.disabled = false;
-          });
-        };
-      }
-    });
-    clearAll();
-    screen.textContent = 'The value must be less than 9 symbols';
+    // buttons.forEach(button => {
+    //   if (button.classList.contains('ac')) {
+    //     button.disabled = false;
+    //   } else {
+    //     button.classList.add('disabled');
+    //     button.disabled = true; // Отключаем остальные кнопки
+    //     document.querySelector('.ac').onclick = () => {
+    //       clearAll();
+    //       buttons.forEach(btn => {
+    //         btn.classList.remove('disabled');
+    //         btn.disabled = false;
+    //       });
+    //     };
+    //   }
+    // });
+    // clearAll();
+    // screen.textContent = valueOfCurrentButton
     return;
   }
 

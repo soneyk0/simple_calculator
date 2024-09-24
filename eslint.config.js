@@ -1,6 +1,8 @@
 import js from '@eslint/js';
 import prettierRecommended from 'eslint-plugin-prettier/recommended';
 import globals from 'globals';
+import prettier from 'eslint-plugin-prettier';
+
 export default [
   {
     files: ['**/*.js']
@@ -9,6 +11,9 @@ export default [
   {
     languageOptions: {
       globals: globals.browser
+    },
+    plugins: {
+      prettier
     }
   },
   prettierRecommended,
@@ -16,11 +21,10 @@ export default [
     rules: {
       'no-console': 'warn',
       'prettier/prettier': [
-        'warn',
+        'error',
         {
           arrowParens: 'avoid',
           printWidth: 120,
-          semi: true,
           singleQuote: true,
           trailingComma: 'none'
         }
