@@ -35,11 +35,11 @@
     "webpack-cli": "^5.1.4",
     "webpack-dev-server": "^5.1.0"
   },
-//  "husky": {
-//    "hooks": {
-//      "pre-commit": "lint-staged"
-//    }
-//  },
+  "husky": {
+    "hooks": {
+      "pre-commit": "lint-staged"
+    }
+  },
   "lint-staged": {
     "*.{js,json,css,scss,md}": [
       "prettier --write",
